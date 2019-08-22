@@ -100,8 +100,8 @@
       this.parallaxOffsetY += (this.parallaxTargY - this.parallaxOffsetY) / 10; // Easing equation
     }
 
-    var elWidth = this.group.element.offsetWidth;
-    var elHeight = this.group.element.offsetHeight;
+    var elWidth = 2020;//this.group.element.offsetWidth;
+    var elHeight = 1180;//this.group.element.offsetHeight;
 
     switch (this.group.directionX) {
       case 'left':
@@ -222,8 +222,8 @@
   }
 
   ParticleGround.prototype.__apply_canvas_style__ = function() {
-    this.canvas.width = this.element.offsetWidth;
-    this.canvas.height = this.element.offsetHeight;
+    this.canvas.width = 2020;this.element.offsetWidth;
+    this.canvas.height = 1180;//this.element.offsetHeight;
     this.ctx.fillStyle = this.dotColor;
     this.ctx.strokeStyle = this.lineColor;
     this.ctx.lineWidth = this.lineWidth;
@@ -281,8 +281,8 @@
   ParticleGround.prototype.resize = function() {
       this.__apply_canvas_style__();
 
-      var elWidth = this.element.offsetWidth;
-      var elHeight = this.element.offsetHeight;
+      var elWidth = 2020;//this.element.offsetWidth;
+      var elHeight = 1180;//this.element.offsetHeight;
 
       // Remove particles that are outside the canvas
       for (var i = this.particles.length - 1; i >= 0; i--) {
